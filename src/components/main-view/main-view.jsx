@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { MovieView } from '../movie-view/movie-view';
 import { MovieCard } from '../movie-card/movie-card';
 
 export const MainView = () => {
@@ -39,10 +39,11 @@ export const MainView = () => {
     },
   ]);
 
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
   if (selectedMovie) {
     return <MovieView movie={selectedMovie} onBackClick={() => setSelectedMovie(null)} />;
   }
-  const [selectedMovie, setSelectedMovie] = useState(null);
 
   if (movies.length === 0) {
     return <div>The list is empty</div>;
