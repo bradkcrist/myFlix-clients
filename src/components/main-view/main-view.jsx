@@ -19,7 +19,7 @@ export const MainView = () => {
     {
       id: 2,
       title: 'The Hobbit: The Desolation of Smaug',
-      image: 'https://m.media-amazon.com/images/M/MV5BMzU0NDY0NDEzNV5BMl5BanBnXkFtZTgwOTIxNDU1MDE@._V1_.jpg',
+      image: 'https://upload.wikimedia.org/wikipedia/en/4/4f/The_Hobbit_-_The_Desolation_of_Smaug_theatrical_poster.jpg',
       description:
         'Bilbo Baggins navigates perilous landscapes and encounters dangerous creatures as he joins a quest to reclaim treasure guarded by the dragon Smaug. Unraveling secrets and testing alliances, the journey becomes a thrilling adventure where friendships are forged and courage is tested in the heart of Middle-earth.',
       genre:
