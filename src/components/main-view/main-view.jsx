@@ -6,7 +6,12 @@ import { useState, useEffect } from 'react';
 export const MainView = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
-    fetch('https://mymovie1-195f3788c76b.herokuapp.com/')
+    fetch('https://mymovie1-195f3788c76b.herokuapp.com/', {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
         const moviesFromApi = data.docs.map((doc) => {
