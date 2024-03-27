@@ -4,7 +4,7 @@ import { MovieCard } from '../movie-card/movie-card';
 import { useState, useEffect } from 'react';
 
 export const MainView = () => {
-  const [movies, setMovies] = useState([]);
+  const [movie, setMovies] = useState([]);
   useEffect(() => {
     fetch('https://mymovie1-195f3788c76b.herokuapp.com/movies', {
       headers: {
@@ -24,7 +24,7 @@ export const MainView = () => {
             birth: doc.Director.Birth,
             bio: doc.Director.Bio,
             genre: doc.Genre.Name,
-            details: doc.Genre.Description,
+            descript: doc.Genre.Description,
             featured: doc.Featured,
           };
         });
@@ -38,13 +38,13 @@ export const MainView = () => {
     return <MovieView movie={selectedMovie} onBackClick={() => setSelectedMovie(null)} />;
   }
 
-  if (movies.length === 0) {
+  if (movie.length === 0) {
     return <div>The list is empty</div>;
   }
 
   return (
     <div>
-      {movies.map((movie) => {
+      {movie.map((movie) => {
         return (
           <MovieCard
             key={movie.id}

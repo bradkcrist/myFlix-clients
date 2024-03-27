@@ -27189,7 +27189,7 @@ var _movieCard = require("../movie-card/movie-card");
 var _s = $RefreshSig$();
 const MainView = ()=>{
     _s();
-    const [movies, setMovies] = (0, _react.useState)([]);
+    const [movie, setMovies] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         fetch("https://mymovie1-195f3788c76b.herokuapp.com/movies", {
             headers: {
@@ -27207,7 +27207,7 @@ const MainView = ()=>{
                     birth: doc.Director.Birth,
                     bio: doc.Director.Bio,
                     genre: doc.Genre.Name,
-                    details: doc.Genre.Description,
+                    descript: doc.Genre.Description,
                     featured: doc.Featured
                 };
             });
@@ -27223,7 +27223,7 @@ const MainView = ()=>{
         lineNumber: 38,
         columnNumber: 12
     }, undefined);
-    if (movies.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    if (movie.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: "The list is empty"
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
@@ -27231,7 +27231,7 @@ const MainView = ()=>{
         columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: movies.map((movie)=>{
+        children: movie.map((movie)=>{
             return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                 movie: movie,
                 onMovieClick: (newSelectedMovie)=>{
@@ -27249,7 +27249,7 @@ const MainView = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "llzgrUkvR/+OoCNfiqlA1H2LLFI=");
+_s(MainView, "4GVxqM/4csyfZaIJAfRPipvzJ5w=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
@@ -27640,8 +27640,17 @@ MovieCard.propTypes = {
     movie: (0, _propTypesDefault.default).shape({
         title: (0, _propTypesDefault.default).string,
         description: (0, _propTypesDefault.default).string,
-        genre: (0, _propTypesDefault.default).string,
-        director: (0, _propTypesDefault.default).string
+        image: (0, _propTypesDefault.default).string,
+        genre: (0, _propTypesDefault.default).shape({
+            name: (0, _propTypesDefault.default).string,
+            descript: (0, _propTypesDefault.default).string
+        }),
+        director: (0, _propTypesDefault.default).shape({
+            name: (0, _propTypesDefault.default).string,
+            bio: (0, _propTypesDefault.default).string,
+            birth: (0, _propTypesDefault.default).number
+        }),
+        featured: (0, _propTypesDefault.default).string
     }).isRequired,
     onMovieClick: (0, _propTypesDefault.default).func.isRequired
 };
@@ -27653,7 +27662,7 @@ $RefreshReg$(_c, "MovieCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","prop-types":"7wKI2"}],"7wKI2":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7wKI2":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
