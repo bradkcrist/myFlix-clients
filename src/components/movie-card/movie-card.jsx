@@ -19,7 +19,7 @@ MovieCard.propTypes = {
     image: PropTypes.string,
     genre: PropTypes.shape({
       name: PropTypes.string,
-      description: PropTypes.string,
+      descript: PropTypes.string,
     }),
     director: PropTypes.shape({
       name: PropTypes.string,
