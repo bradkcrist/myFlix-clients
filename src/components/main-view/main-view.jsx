@@ -24,7 +24,7 @@ export const MainView = () => {
             birth: doc.Director.Birth,
             bio: doc.Director.Bio,
             genre: doc.Genre.Name,
-            descript: doc.Genre.Description,
+            details: doc.Genre.Description,
             featured: doc.Featured,
           };
         });
