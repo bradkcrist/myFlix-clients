@@ -8,6 +8,7 @@ export const MovieCard = ({ movie, onMovieClick }) => {
       }}
     >
       {movie.title}
+      {movie.imagepath}
     </div>
   );
 };

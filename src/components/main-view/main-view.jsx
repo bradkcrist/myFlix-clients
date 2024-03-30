@@ -19,6 +19,7 @@ export const MainView = () => {
           return {
             id: doc._id,
             title: doc.Title,
+            image: doc.ImagePath,
             description: doc.Description,
             director: doc.Director.Name,
             birth: doc.Director.Birth,
