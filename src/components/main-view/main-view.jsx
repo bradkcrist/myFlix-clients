@@ -1,15 +1,17 @@
-import { useState } from 'react';
 import { MovieView } from '../movie-view/movie-view';
 import { MovieCard } from '../movie-card/movie-card';
+import { LoginView } from '../login-view/login-view';
+import { SignupView } from '../signup-view/signup-view';
 import { useState, useEffect } from 'react';
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem('user'));
   const storedToken = localStorage.getItem('token');
-  const [movie, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
+  const [movie, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
   useEffect(() => {
     if (!token) {
       return;
@@ -45,12 +47,16 @@ export const MainView = () => {
 
   if (!user) {
     return (
-      <LoginView
-        onLoggedIn={(user, token) => {
-          setUser(user);
-          setToken(token);
-        }}
-      />
+      <>
+        <LoginView
+          onLoggedIn={(user, token) => {
+            setUser(user);
+            setToken(token);
+          }}
+        />
+        or
+        <SignupView />
+      </>
     );
   }
 
@@ -68,6 +74,7 @@ export const MainView = () => {
         onClick={() => {
           setUser(null);
           setToken(null);
+          localStorage.clear();
         }}
       >
         Logout
