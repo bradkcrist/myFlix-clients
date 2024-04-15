@@ -1,15 +1,20 @@
 import PropTypes from 'prop-types';
+import { Row, Col, Card } from 'react-bootstrap';
 
 export const MovieCard = ({ movie, onMovieClick }) => {
   return (
-    <div
+    <Row
       onClick={() => {
         onMovieClick(movie);
       }}
     >
-      {movie.title}
-      {movie.imagepath}
-    </div>
+      <Col>
+        <Card className='movie-click'>
+          {movie.title}
+          {movie.imagepath}
+        </Card>
+      </Col>
+    </Row>
   );
 };
 

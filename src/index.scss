@@ -1,5 +1,102 @@
-$color: steelblue;
+$body-bg: #262223;
 
-.my-flix {
-  color: $color;
+@import '~bootstrap/scss/bootstrap.scss';
+
+$primary: #262223;
+$secondary: #ddc6b6;
+$third: #faf9f6;
+
+.login {
+  color: $secondary;
+  padding-top: 10px;
+}
+
+.login-bubble:focus {
+  background: $secondary;
+  transition: none;
+}
+
+.login-bubble {
+  background-color: $secondary;
+}
+
+.login-btn {
+  margin-top: 10px;
+  color: $primary;
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
+.signup {
+  color: $secondary;
+  padding-top: 10px;
+}
+
+.signup-bubble:focus {
+  background: $secondary;
+  transition: none;
+}
+
+.signup-bubble {
+  background-color: $secondary;
+}
+
+.signup-btn {
+  margin-top: 10px;
+  color: $primary;
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
+.movie-click {
+  margin: 10px;
+  color: $secondary;
+  padding: 20px;
+  border-color: $third;
+}
+
+.title {
+  color: $secondary;
+  font-size: x-large;
+  text-align: center;
+}
+
+.title-info {
+  color: $secondary;
+  font-size: large;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.movie-info {
+  color: $secondary;
+  font-size: medium;
+  text-align: center;
+}
+
+.movie-card {
+  border-color: $third;
+}
+
+.movie-btn {
+  background-color: $third;
+  color: $primary;
+  border-color: $primary;
+}
+
+.movie-btn:hover {
+  background: transparent;
+  border-color: $third;
+}
+
+.logout-btn {
+  background-color: $third;
+  color: $primary;
+  border-color: $primary;
+}
+
+.logout-btn:hover {
+  background: transparent;
+  border-color: $third;
 }
