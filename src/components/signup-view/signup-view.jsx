@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Form, Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 export const SignupView = () => {
   const [username, setUsername] = useState('');
@@ -33,24 +34,35 @@ export const SignupView = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Username:
-        <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} required minLength='6' />
-      </label>
-      <label>
-        Password:
-        <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
-      </label>
-      <label>
-        Email:
-        <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} required />
-      </label>
-      <label>
-        Birth:
-        <input type='date' value={birth} onChange={(e) => setBirth(e.target.value)} required />
-      </label>
-      <button type='submit'>Submit</button>
-    </form>
+    <Container>
+      <Row>
+        <Col>
+          <Card>
+            <Card.Title className='signup'>Sign-Up Page</Card.Title>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group>
+                <Form.Label className='signup'>Username:</Form.Label>
+                <Form.Control className='signup-bubble' type='text' value={username} onChange={(e) => setUsername(e.target.value)} required minLength='6' placeholder='Enter Username' />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label className='signup'>Password:</Form.Label>
+                <Form.Control className='signup-bubble' type='password' value={password} onChange={(e) => setPassword(e.target.value)} required placeholder='Enter Password' />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label className='signup'>Email:</Form.Label>
+                <Form.Control className='signup-bubble' type='email' value={email} onChange={(e) => setEmail(e.target.value)} required placeholder='Enter Email' />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label className='signup'>Birth:</Form.Label>
+                <Form.Control className='signup-bubble' type='date' value={birth} onChange={(e) => setBirth(e.target.value)} required placeholder='Enter Birthday' />
+              </Form.Group>
+              <Button className='signup-btn' type='submit'>
+                Submit
+              </Button>
+            </Form>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 };

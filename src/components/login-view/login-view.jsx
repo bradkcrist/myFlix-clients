@@ -1,5 +1,6 @@
 import { React } from 'react';
 import { useState } from 'react';
+import { Form, Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState('');
@@ -37,16 +38,27 @@ export const LoginView = ({ onLoggedIn }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Username:
-        <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} required />
-      </label>
-      <label>
-        Password:
-        <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
-      </label>
-      <button type='submit'>Submit</button>
-    </form>
+    <Container>
+      <Row>
+        <Col>
+          <Card>
+            <Card.Title className='login'>Login Page</Card.Title>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group>
+                <Form.Label className='login'>Username:</Form.Label>
+                <Form.Control className='login-bubble' type='text' value={username} onChange={(e) => setUsername(e.target.value)} required placeholder='Enter Username' />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label className='login'>Password:</Form.Label>
+                <Form.Control className='login-bubble' type='password' value={password} onChange={(e) => setPassword(e.target.value)} required placeholder='Enter Password' />
+              </Form.Group>
+              <Button className='login-btn' type='submit'>
+                Submit
+              </Button>
+            </Form>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 };
