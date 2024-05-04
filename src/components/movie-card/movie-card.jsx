@@ -87,16 +87,20 @@ export const MovieCard = ({ movie, isFavorite }) => {
           <Card.Body>
             <Card.Img src={movie.image} width='50' />
             <Card.Title>{movie.title}</Card.Title>
-            <Link to={`/movie/${encodeURIComponent(movie.id)}`}>
-              <Button>Open</Button>
-            </Link>
+            <Col className='text-center'>
+              <Link to={`/movie/${encodeURIComponent(movie.id)}`}>
+                <Button size='sm' className='card-openbtn'>
+                  Open
+                </Button>
+              </Link>
+            </Col>
             <Card>
               {isFavorite ? (
-                <Button variant='primary' onClick={handleRemoveFromFavorites}>
+                <Button className='fav-btn' size='sm' variant='primary' onClick={handleRemoveFromFavorites}>
                   Remove from favorites
                 </Button>
               ) : (
-                <Button variant='primary' onClick={handleAddToFavorites}>
+                <Button className='removefav-btn' size='sm' variant='primary' onClick={handleAddToFavorites}>
                   Add to favorites
                 </Button>
               )}
