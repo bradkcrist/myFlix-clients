@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { MovieCard } from '../movie-card/movie-card';
 
 export const ProfileView = ({ movies, favoriteMovieIds }) => {
-  console.log(movies);
-  console.log(favoriteMovieIds);
   let favoriteMovies = (movies || []).filter((m) => favoriteMovieIds.includes(m.id));
   const storedUser = JSON.parse(localStorage.getItem('user'));
   const storedToken = localStorage.getItem('token');

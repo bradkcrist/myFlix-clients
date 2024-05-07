@@ -3,6 +3,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export const NavigationBar = ({ user, onLoggedOut }) => {
+  console.log;
   return (
     <Navbar bg='light' expand='lg'>
       <Container>
@@ -10,7 +11,7 @@ export const NavigationBar = ({ user, onLoggedOut }) => {
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='me-auto'>
-            {user ? (
+            {!user ? (
               <>
                 <Nav.Link as={Link} to='/login'>
                   Login
