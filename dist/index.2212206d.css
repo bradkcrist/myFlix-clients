@@ -13284,4 +13284,37 @@ textarea.form-control-lg {
   background: none;
   border-color: #faf9f6;
 }
+
+.card-openbtn {
+  color: #262223;
+  background-color: #faf9f6;
+  border-color: #262223;
+}
+
+.card-openbtn:hover {
+  background: none;
+  border-color: #faf9f6;
+}
+
+.fav-btn {
+  color: #262223;
+  background-color: #faf9f6;
+  border-color: #262223;
+}
+
+.fav-btn:hover {
+  background: none;
+  border-color: #faf9f6;
+}
+
+.removefav-btn {
+  color: #262223;
+  background-color: #faf9f6;
+  border-color: #262223;
+}
+
+.removefav-btn:hover {
+  background: none;
+  border-color: #faf9f6;
+}
 /*# sourceMappingURL=index.2212206d.css.map */

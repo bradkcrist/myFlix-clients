@@ -100,3 +100,36 @@ $third: #faf9f6;
   background: transparent;
   border-color: $third;
 }
+
+.card-openbtn {
+  background-color: $third;
+  color: $primary;
+  border-color: $primary;
+}
+
+.card-openbtn:hover {
+  background: transparent;
+  border-color: $third;
+}
+
+.fav-btn {
+  background-color: $third;
+  color: $primary;
+  border-color: $primary;
+}
+
+.fav-btn:hover {
+  background: transparent;
+  border-color: $third;
+}
+
+.removefav-btn {
+  background-color: $third;
+  color: $primary;
+  border-color: $primary;
+}
+
+.removefav-btn:hover {
+  background: transparent;
+  border-color: $third;
+}
