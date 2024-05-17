@@ -18,7 +18,6 @@ export const MovieCard = ({ movie, isFavorite }) => {
     const addToFavorites = () => {
       fetch(`https://mymovie1-195f3788c76b.herokuapp.com/users/${user.Username}/movies/${encodeURIComponent(movie.id)}`, {
         method: 'POST',
-        // body: JSON.stringify(favoriteMoviesData),
         headers: { Authorization: `Bearer ${storedToken}`, 'Content-Type': 'application/json' },
       })
         .then((response) => {
@@ -85,7 +84,7 @@ export const MovieCard = ({ movie, isFavorite }) => {
       <Col>
         <Card className='movie-click'>
           <Card.Body>
-            <Card.Img src={movie.image} width='50' />
+            <Card.Img className='movie-img' src={movie.image} />
             <Card.Title>{movie.title}</Card.Title>
             <Col className='text-center'>
               <Link to={`/movie/${encodeURIComponent(movie.id)}`}>

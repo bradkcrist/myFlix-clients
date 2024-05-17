@@ -27,6 +27,11 @@ $third: #faf9f6;
   border-color: $secondary;
 }
 
+.profile-placeholder {
+  color: $secondary;
+  text-align: center;
+}
+
 .signup {
   color: $secondary;
   padding-top: 10px;
@@ -112,6 +117,10 @@ $third: #faf9f6;
   border-color: $third;
 }
 
+.movie-img {
+  size-adjust: auto;
+}
+
 .fav-btn {
   background-color: $third;
   color: $primary;
@@ -132,4 +141,27 @@ $third: #faf9f6;
 .removefav-btn:hover {
   background: transparent;
   border-color: $third;
+}
+
+.profile-update-btn {
+  border-color: $third;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.profile-delete-btn {
+  border-color: $third;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+.profile-form {
+  display: grid;
+}
+
+.user-info {
+  margin: 10px;
+  padding: 10px;
+  text-decoration: $primary;
 }

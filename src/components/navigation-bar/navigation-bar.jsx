@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const NavigationBar = ({ user, onLoggedOut }) => {
   console.log;
   return (
-    <Navbar bg='light' expand='lg'>
+    <Navbar bg='light' expand='sm'>
       <Container>
         <Navbar.Brand>MyMovies</Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />

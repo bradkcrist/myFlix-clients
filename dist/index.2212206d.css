@@ -13211,6 +13211,11 @@ textarea.form-control-lg {
   margin-top: 10px;
 }
 
+.profile-placeholder {
+  color: #ddc6b6;
+  text-align: center;
+}
+
 .signup {
   color: #ddc6b6;
   padding-top: 10px;
@@ -13296,6 +13301,10 @@ textarea.form-control-lg {
   border-color: #faf9f6;
 }
 
+.movie-img {
+  size-adjust: auto;
+}
+
 .fav-btn {
   color: #262223;
   background-color: #faf9f6;
@@ -13316,5 +13325,29 @@ textarea.form-control-lg {
 .removefav-btn:hover {
   background: none;
   border-color: #faf9f6;
+}
+
+.profile-update-btn {
+  border-color: #faf9f6;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.profile-delete-btn {
+  border-color: #faf9f6;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-form {
+  display: grid;
+}
+
+.user-info {
+  margin: 10px;
+  padding: 10px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 /*# sourceMappingURL=index.2212206d.css.map */

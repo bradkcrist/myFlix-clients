@@ -10,7 +10,7 @@ export const MovieView = ({ movie }) => {
   return (
     <Card className='movie-card'>
       <Card.Body>
-        <Card.Img className='movie-img' variant='top' src={movies.image} width={100} height={700} />
+        <Card.Img className='movie-img' variant='top' src={movies.image} />
         <Card.Title className='title'>{movies.title}</Card.Title>
         <Card.Subtitle className='title-info'>Description:</Card.Subtitle>
         <Card.Text className='movie-info'>{movies.description}</Card.Text>

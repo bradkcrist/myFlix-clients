@@ -65,17 +65,21 @@ export const ProfileView = ({ movies, favoriteMovieIds }) => {
       test
       {user ? (
         <div>
-          <h1>User Profile</h1>
-          <form onSubmit={handleUpdate}>
-            <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} placeholder='Username' />
-            <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password' />
-            <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' />
-            <button type='submit'>Update Profile</button>
+          <h2 className='profile-placeholder'>User Profile</h2>
+          <form className='profile-form' onSubmit={handleUpdate}>
+            <input className='user-info' type='text' value={username} onChange={(e) => setUsername(e.target.value)} placeholder='Username' />
+            <input className='user-info' type='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password' />
+            <input className='user-info' type='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' />
+            <button className='profile-update-btn' type='submit'>
+              Update Profile
+            </button>
+            <button className='profile-delete-btn' onClick={handleDeregister}>
+              Delete Profile
+            </button>
           </form>
-          <button onClick={handleDeregister}>Delete Profile</button>
-          <h2>Favorite Movies</h2>
+          <h2 className='profile-placeholder'>Favorite Movies</h2>
           {favoriteMovies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
+            <MovieCard key={movie.id} movie={movie} isFavorite={user.FavoriteMovies.includes(movie.id)} />
           ))}
         </div>
       ) : (
